@@ -19,9 +19,12 @@ public class Money {
     }
     
     public String getAmountString(){
-        String amountString =
+        return "";
     }
     public Money subtract (Money input){
+       
+    }
+    public String toString (){
         
     }
 }

@@ -14,10 +14,11 @@ public class Currency {
     private String symbol;
     
     public Currency(String name, String symbol){
-        
+        this.name =name;
+        this.symbol =symbol;
     }
     
-    public boolean equals(){
+    public boolean equals(Object object){
         return true;
     }
 }
