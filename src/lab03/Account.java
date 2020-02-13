@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package emptyjavaproject;
+package lab03;
 
 /**
  *
@@ -17,11 +17,11 @@ public class Account {
     }
     
     public void withdraw(Money m){
-        
+        balance.subtract(m);
     }
     
     public void deposit (Money m){
-        
+        balance.add(m);
     }
     
     public Money getBalance(){

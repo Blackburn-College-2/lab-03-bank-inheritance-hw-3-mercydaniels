@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package emptyjavaproject;
+package lab03;
 
 /**
  *
@@ -15,7 +15,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Currency dollars = new Currency("dollars", "$");
+        Money balance = new Money(dollars, 100);
+        Account myAccount = new Account(balance);
+
     }
-    
+
 }
