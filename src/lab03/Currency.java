@@ -18,7 +18,11 @@ public class Currency {
         this.name = name;
         this.symbol = symbol;
     }
-
+/**
+ * determines if two currency types are the same
+ * @param object currency to be compared
+ * @return boolean
+ */
     public boolean equals(Object object) {
         if (this.name.equals(object)) {
             return true;

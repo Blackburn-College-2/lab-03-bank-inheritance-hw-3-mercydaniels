@@ -29,24 +29,40 @@ public class Money {
     public long setAmountNeg() {
         return -amount;
     }
+    /**
+     * returns the amount from Money as a string
+     * @return amount as String
+     */
     public String getAmountString() {
         return amount + "";
     }
-
+    /**
+     * used for withdrawals; subtracts the amount m from the balance
+     * @param input money to be subtracted
+     * @return subtractedAmount as Money
+     */
     public Money subtract(Money input) {
         long newAmount = this.amount - input.getAmount();
         this.amount = newAmount;
         Money subtractedAmount = new Money(currency, newAmount);
         return subtractedAmount;
     }
-
+/**
+ * used for deposits; adds amount m to the balance
+ * @param input money to be added
+ * @return addedAmount as Money
+ */
     public Money add(Money input) {
         long newAmount = this.amount + input.getAmount();
         this.amount = newAmount;
         Money addedAmount = new Money(currency, newAmount);
         return addedAmount;
     }
-
+/**
+ * overrides toString to return the currency and the amount
+ * @return string
+ */
+    @Override
     public String toString() {
         return "" + currency + amount;
     }

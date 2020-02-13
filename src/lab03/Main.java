@@ -7,7 +7,7 @@ package lab03;
 
 /**
  *
- * @author paul.kline
+ * @author mercy.daniels
  */
 public class Main {
 
@@ -18,11 +18,14 @@ public class Main {
         Currency dollars = new Currency("dollars", "$");
         Money balance = new Money(dollars, 100);
         Money changeAmount = new Money(dollars, 10);
+        Money changeAmount2 = new Money(dollars, 15);
         Account myAccount = new Account(balance);
         myAccount.deposit(changeAmount);
-        System.out.println(myAccount.toString());
+        myAccount.withdraw(changeAmount2);
+        myAccount.deposit(changeAmount2);
         myAccount.withdraw(changeAmount);
-        System.out.println(myAccount.toString());
+        myAccount.withdraw(changeAmount2);
+        myAccount.printHistory();
     }
 
 }
