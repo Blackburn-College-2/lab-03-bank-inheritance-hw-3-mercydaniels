@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *
  * @author mercy.daniels
  */
-public class Account {
+public abstract class Account {
     private Money balance;
     private ArrayList<Money> history = new ArrayList<Money>();
     
@@ -24,6 +24,7 @@ public class Account {
          balance = balance.subtract(m);
         
         history.add(balance);
+        
     }
     /**
      * adds money to the account balance 

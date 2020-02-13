@@ -58,7 +58,14 @@ public class Money {
         Money addedAmount = new Money(currency, newAmount);
         return addedAmount;
     }
-/**
+
+    public Money multiply(Money input) {
+        long newAmount = this.amount * input.getAmount();
+        this.amount = newAmount;
+        Money productAmount = new Money (currency, newAmount);
+        return productAmount;
+    }
+ /**
  * overrides toString to return the currency and the amount
  * @return string
  */
