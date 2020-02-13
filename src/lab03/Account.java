@@ -13,7 +13,7 @@ public class Account {
     private Money balance;
     
     public Account(Money balance){
-        
+        this.balance = balance;
     }
     
     public void withdraw(Money m){
@@ -26,5 +26,8 @@ public class Account {
     
     public Money getBalance(){
         return balance;
+    }
+    public String toString(){
+        return balance.getAmountString();
     }
 }

@@ -17,8 +17,12 @@ public class Main {
     public static void main(String[] args) {
         Currency dollars = new Currency("dollars", "$");
         Money balance = new Money(dollars, 100);
+        Money changeAmount = new Money(dollars, 10);
         Account myAccount = new Account(balance);
-
+        myAccount.deposit(changeAmount);
+        System.out.println(myAccount.toString());
+        myAccount.withdraw(changeAmount);
+        System.out.println(myAccount.toString());
     }
 
 }
