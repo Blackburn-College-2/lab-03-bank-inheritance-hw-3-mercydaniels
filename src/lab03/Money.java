@@ -7,6 +7,10 @@ package lab03;
  */
 public class Money {
 
+    public void setAmount(long amount) {
+        this.amount = amount;
+    }
+
     private Currency currency;
     private long amount;
 
